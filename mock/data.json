@@ -1,0 +1,115 @@
+{
+  "apis": [
+    {
+      "id": 1,
+      "title": "데이터 불러오기",
+      "url": "http://localhost:8080/main",
+      "description": "서버에서 데이터를 가져옵니다.",
+      "method": "get",
+      "request": {
+        "header": {
+          "colObjectList": [
+            { "name": "name", "name_kr": "이름" },
+            { "name": "description", "name_kr": "설명" },
+            { "name": "required", "name_kr": "필수" }
+          ],
+          "rowObjectList": [
+            {
+              "name": "Authorization",
+              "description": "Bearer",
+              "required": true
+            }
+          ]
+        },
+        "body": {
+          "colObjectList": [
+            { "name": "name", "name_kr": "이름" },
+            { "name": "type", "name_kr": "타입" },
+            { "name": "description", "name_kr": "설명" },
+            { "name": "required", "name_kr": "필수" }
+          ],
+          "rowObjectList": [
+            {
+              "name": "target_id_type",
+              "description": "회원번호 종류, user_id로 고정",
+              "required": true,
+              "type": "String"
+            },
+            {
+              "name": "target_id",
+              "description": "연결을 끊을 사용자의 회원번호",
+              "required": true,
+              "type": "Long"
+            }
+          ]
+        }
+      },
+      "response": {
+        "body": {
+          "colObjectList": [
+            { "name": "name", "name_kr": "이름" },
+            { "name": "type", "name_kr": "타입" },
+            { "name": "description", "name_kr": "설명" },
+            { "name": "required", "name_kr": "필수" }
+          ],
+          "rowObjectList": [
+            {
+              "name": "id",
+              "description": "연결 끊기에 성공한 사용자의 회원번호",
+              "required": true,
+              "type": "Long"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "title": "데이터 변경하기",
+      "url": "http://localhost:8080/post",
+      "description": "데이터를 변경할 수 있습니다.",
+      "method": "update",
+      "request": {
+        "header": {
+          "colObjectList": [
+            { "name": "name", "name_kr": "이름" },
+            { "name": "description", "name_kr": "설명" },
+            { "name": "required", "name_kr": "필수" }
+          ],
+          "rowObjectList": [
+            {
+              "name": "Authorization",
+              "description": "Bearer",
+              "required": true
+            }
+          ]
+        }
+      },
+      "response": {}
+    },
+    {
+      "id": 3,
+      "title": "데이터 삭제하기",
+      "url": "http://localhost:8080/delete",
+      "description": "데이터를 삭제할 수 있습니다.",
+      "method": "delete",
+      "request": {
+        "header": {
+          "colObjectList": [
+            { "name": "name", "name_kr": "이름" },
+            { "name": "description", "name_kr": "설명" },
+            { "name": "required", "name_kr": "필수" }
+          ],
+          "rowObjectList": [
+            {
+              "name": "Authorization",
+              "description": "Bearer",
+              "required": true
+            }
+          ]
+        }
+      },
+      "response": {}
+    }
+  ]
+}
