@@ -22,6 +22,7 @@ const config: Config = {
         pointColor: "rgb(20, 60, 86)",
         greenColor: "rgb(0, 200, 140)",
         bgColor: "rgb(48, 48, 48)",
+        bgColor2 : "#121212",
         inside: "#01092b",
       },
       backgroundImage: {
