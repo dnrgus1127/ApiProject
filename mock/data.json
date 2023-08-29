@@ -41,7 +41,17 @@
               "required": true,
               "type": "Long"
             }
-          ]
+          ],
+          "example": {
+            "target_id_type": {
+              "value": "user_id",
+              "annotaion": "회원번호 정류, user_id로 고정"
+            },
+            "target_id": {
+              "value": 684535,
+              "annotaion": "연결을 끊을 사용자의 회원번호"
+            }
+          }
         }
       },
       "response": {
@@ -59,7 +69,13 @@
               "required": true,
               "type": "Long"
             }
-          ]
+          ],
+          "example": {
+            "id": {
+              "value": 684535,
+              "annotaion": "연결 끊기에 성공한 사용자의 회원번호"
+            }
+          }
         }
       }
     },

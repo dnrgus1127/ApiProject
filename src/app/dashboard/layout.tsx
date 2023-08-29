@@ -5,7 +5,7 @@ export default function Layout(props: {
   rest: ReactNode;
 }) {
   return (
-    <div className='px-12 py-16'>
+    <div className='px-5 sm:px-12 py-8 sm:py-16'>
       {props.rest}
       <Suspense fallback={<p>loading...</p>}>{props.children}</Suspense>
     </div>

@@ -18,7 +18,7 @@ export default function RootLayout(props: {
     <html lang='en'>
       <body className={inter.className + "font-sans bg-[#121212]  py-16 "}>
         <Header />
-        <div className='fixed -z-10 right-0 top-0 w-side h-[100vh] bg-white'></div>
+        <div className='fixed -z-10 right-0 top-0 sm:w-side h-[100vh]  bg-white '></div>
         {props.children}
       </body>
     </html>

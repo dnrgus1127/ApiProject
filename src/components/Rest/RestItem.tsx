@@ -1,18 +1,15 @@
 import { RestData } from "@/@types/rest";
 import React from "react";
 import RestTable from "./RestTable";
-import useBoolean from "@/Hooks/useBoolean";
-import AnnotaionBox from "./ObjectBox";
 
 interface RestItemProps {
   data: RestData;
 }
 
-
 export default function RestItem({ data }: RestItemProps) {
   return (
-    <div className='w-full text-white  px-3 py-3 flex'>
-      <div className=' [&_h3]:text-2xl [&_h4]:text-xl w-black [&_h3]:py-2 [&_h4]:py-1'>
+    <div className='w-full text-white  sm:px-3 py-3 flex mb-24'>
+      <div className=' [&_h3]:text-2xl [&_h4]:text-xl w-full sm:w-black [&_h3]:py-2 [&_h4]:py-1'>
         <div className='flex justify-between items-start py-1 border-gray-300 border-b-2'>
           <h1 className='text-3xl'>{data.title}</h1>
           <h3 className='text-l'>
@@ -41,10 +38,7 @@ export default function RestItem({ data }: RestItemProps) {
             <RestTable tableName='헤더' data={data.request.header} />
           )}
           {data.request.body && (
-            
-            <RestTable tableName='본문' data={data.request.body} object={ {name : "day"}} />
-              
-            
+            <RestTable tableName='본문' data={data.request.body} />
           )}
           <h3>응답</h3>
 
@@ -53,7 +47,6 @@ export default function RestItem({ data }: RestItemProps) {
           )}
         </div>
       </div>
-
     </div>
   );
 }

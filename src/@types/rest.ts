@@ -25,7 +25,16 @@ type ColObjectList = {
   name_kr: string;
 };
 
+export type ExampleData = {
+  [key: string]: ExampleAttr;
+};
+type ExampleAttr = {
+  value: string | number;
+  annotaion: string;
+};
+
 export type RestTableData = {
   colObjectList: ColObjectList[];
   rowObjectList: RowObject[];
+  example: ExampleData;
 };
