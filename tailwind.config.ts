@@ -21,7 +21,9 @@ const config: Config = {
       colors: {
         pointColor: "rgb(20, 60, 86)",
         greenColor: "rgb(0, 200, 140)",
-        bgColor: "rgb(48, 48, 48)",
+        borderColor: "#3b82f6",
+        bgColor: "#18181b",
+        bgElement : "#27272a",
         bgColor2 : "#121212",
         inside: "#01092b",
       },

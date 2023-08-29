@@ -10,7 +10,7 @@ export default function ObjectBox({ data }: { data: ExampleData }) {
   const [showAnnotaion, onToogleAnnotation] = useBoolean(true);
 
   return (
-    <div className='bg-inside sm:w-white sm:absolute right-0 sm:translate-x-[105%]'>
+    <div className='bg-bgColor sm:w-white sm:absolute right-0 sm:translate-x-[105%] rounded-md border border-gray-400'>
       <div className='absolute right-1 flex items-center gap-2 p-1 '>
         <label
           htmlFor='annotaion'
@@ -35,7 +35,7 @@ export default function ObjectBox({ data }: { data: ExampleData }) {
             return (
               <React.Fragment>
                 <p className='pl-4'>
-                  <span className='text-greenColor'>{key}</span> :{" "}
+                  <span className='text-borderColor'>{key}</span> :{" "}
                   {typeof data[keys[idx]].value === "string"
                     ? `"${data[keys[idx]].value}"`
                     : data[keys[idx]].value}

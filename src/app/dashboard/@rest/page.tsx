@@ -2,7 +2,7 @@ import RestItemList from "@/components/Rest/RestItemList";
 import React from "react";
 
 async function getData() {
-  const res = await fetch("http://localhost:3001/apis", {
+  const res = await fetch("http://localhost:3000/dashboard/restItems", {
     cache: "no-store",
   });
 
